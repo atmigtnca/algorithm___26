@@ -9,7 +9,6 @@ int n;
 void dp()
 {
     rgb[1][1] = ipt[1][1], rgb[1][2] = ipt[1][2], rgb[1][3] = ipt[1][3];
-    // rgb[n][1] = ipt[n][1], rgb[n][2] = ipt[n][2], rgb[n][3] = ipt[n][3];
 
     for (int i = 2; i <= n; i++)
     {
