@@ -28,7 +28,7 @@ int main()
     cin.tie(0), cout.tie(0);
 
     input();
-    sort(&ipt[0], &ipt[n], [](int a, int b) { return a > b; });
+    sort(&ipt[0], &ipt[n]);
     output();
 
     return 0;
