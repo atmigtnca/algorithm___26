@@ -2,12 +2,12 @@
 #include <vector>
 using namespace std;
 using ll = long long;
-vector<int> dp, cnt;
-int n, m, rst = 0;
+vector<ll> cnt;
+ll n, m, rst = 0;
 
 void solve()
 {
-    for (ll mem : cnt)
+    for (auto mem : cnt)
     {
         if (!mem)
         {
@@ -20,20 +20,17 @@ void solve()
 void input()
 {
     cin >> n >> m;
-    dp.resize(n + 1);
     cnt.resize(m);
-    dp[0] = 0;
+    cnt[0] = 1;
+
+    ll sum = 0;
 
     for (int i = 1; i <= n; i++)
     {
-        int ipt;
+        ll ipt;
         cin >> ipt;
-        dp[i] = dp[i - 1] + ipt % m;
-        if (!dp[i])
-        {
-            rst++;
-        }
-        cnt[dp[i]]++;
+        sum = (sum + ipt % m) % m;
+        cnt[sum]++;
     }
 }
 
