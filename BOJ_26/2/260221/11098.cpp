@@ -22,8 +22,8 @@ void input()
                 c = tmpi;
                 name = tmpc;
             }
-            cout << tmpc << '\n';
         }
+        cout << name << '\n';
     }
 }
 
